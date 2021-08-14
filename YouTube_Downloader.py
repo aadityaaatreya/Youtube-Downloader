@@ -1,5 +1,6 @@
 import tkinter 
 import tkinter.filedialog
+from tkinter import messagebox
 import webbrowser
 from pytube import YouTube
 from urllib.request import urlopen 
@@ -16,8 +17,8 @@ def download():
  url = urltextbox.get("1.0","end-1c") 
  try:
   yt = YouTube(url)
- except VideoUnavailable:
-  print("Video unavailable")
+ except:
+  messagebox.showinfo("info", "Video unavailable")
  else:
   yt.streams.get_by_itag(resolution).download(path)
   a4 = tkinter.Label(w,text="Downloading.....",height = 2,width =100)
