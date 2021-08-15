@@ -10,7 +10,7 @@ from io import BytesIO
 w = tkinter.Tk()
 radio = tkinter.IntVar()
 w.title("Youtube Downloader")
-w.geometry("900x300")
+w.geometry("800x500")
 
 
 def download():
@@ -22,16 +22,15 @@ def download():
  else:
   yt.streams.get_by_itag(resolution).download(path)
   l4 = tkinter.Label(w,text="Downloaded\t"+yt.title,height = 2,width =100)
-  l4.grid(row=5,column=0,columnspan=3)
+  l4.grid(row=5,column=1,columnspan=3)
 
 def browse():
  global path
  path = tkinter.filedialog.askdirectory()
  l3 = tkinter.Label(w,text=path,height = 2,width = 80)
  l3.grid(row=1,column=1)
+ thumbnail()
  
-
-
 def res():
  global resolution
  resolution = str(radio.get()) 
@@ -66,22 +65,26 @@ download_button = tkinter.Button(w,text="Download",command=download, font=("Aria
 download_button.grid(row=3,column=2)
 
 github_button = tkinter.Button(w,text="GitHub",command=git, font=("sans serif",20), bg="black",fg ="white")
-github_button.grid(row=1,column=3)
+github_button.grid(row=6,column=0)
 linkedin_button = tkinter.Button(w,text="LinkedIn",command=lkdn, font=("Myriad Pro",20), bg="#0077b5",fg ="white")
-linkedin_button.grid(row=3,column=3,padx=30)
-
-
-
-
-
+linkedin_button.grid(row=6,column=1)
 
 def thumbnail():
- url = urltextbox.get("1.0","end-1c")
+ url = urltextbox.get("1.0","end-1c") 
  yt = YouTube(url)
- rawtn= urlopen("http://tinypic.com/images/goodbye.jpg").read()
- img = Image.open(BytesIO(rawtn)).resize((2,2))
+ tn = yt.thumbnail_url
+ rawtn= urlopen(tn).read()
+ img = Image.open(BytesIO(rawtn)).resize((240,180))
  tkimg = ImageTk.PhotoImage(img)
- l5 = tkinter.Label(w, image = tkimg)
- l5.grid(row=4,column=0)
+ l5.configure(image=tkimg)
+ l5.image= tkimg
+
+
+url="https://www.w3schools.com/images/w3schools_green.jpg"
+rawtn= urlopen(url).read()
+img = Image.open(BytesIO(rawtn)).resize((255,180))
+tkimg = ImageTk.PhotoImage(img)
+l5 = tkinter.Label(w, image = tkimg)
+l5.grid(row=5,column=0)
 
 w.mainloop()
