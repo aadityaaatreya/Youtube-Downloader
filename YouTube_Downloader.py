@@ -89,11 +89,9 @@ def thumbnail():
  l5.image= tkimg
 
 cwd = os.getcwd()
-url=cwd+"\youtube-logo.png"
-rawtn= urlopen(url).read()
-img = Image.open(BytesIO(rawtn)).resize((240,180))
-tkimg = ImageTk.PhotoImage(img)
-l5 = tkinter.Label(w, image = tkimg)
+deftn=cwd+"\\youtube-logo.png"          # Default thumbnail view
+ytlogo = ImageTk.PhotoImage(file=deftn)
+l5 = tkinter.Label(w, image = ytlogo)
 l5.grid(row=5,column=0)
 
 w.mainloop()
