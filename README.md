@@ -15,7 +15,7 @@ This application can download progressive video streams in 360p, 720p and audio 
 2. Click the Browse button to select the folder in which the video is to be downloaded.
 3. Select the video resolution or audio.
 4. Click the Download button to download the video
-<img width="640" alt="2" src="https://user-images.githubusercontent.com/38588505/129539408-bf364011-0ea7-47f8-91fb-858aef539e1a.PNG">
+    <img width="640" alt="2" src="https://user-images.githubusercontent.com/38588505/129539408-bf364011-0ea7-47f8-91fb-858aef539e1a.PNG">
 5. After successful download, a message will pop-up
 
 ********************************************************************
