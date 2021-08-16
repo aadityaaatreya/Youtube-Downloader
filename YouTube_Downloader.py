@@ -93,7 +93,7 @@ linkedin_button.grid(row=6,column=2)
 
 # Default thumbnail view
 cwd = os.getcwd()
-deftn=cwd+"\\res\\youtube-logo.png"          
+deftn=cwd+"\\res\\youtube-logo.png"            # Default thumbnail image path 
 ytlogo = ImageTk.PhotoImage(file=deftn)
 l5 = tkinter.Label(w, image = ytlogo)
 l5.grid(row=5,column=0)
