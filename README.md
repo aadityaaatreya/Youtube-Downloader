@@ -13,6 +13,7 @@ This application can download progressive video streams in 360p, 720p and audio 
 3. Select the video resolution or audio.
 4. Click the Download button to download the video
 4. After successful download, a message will pop-up
+5. ![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
 
 ********************************************************************
 
