@@ -10,7 +10,7 @@ This application can download progressive video streams in 360p, 720p and audio 
 ## Usage:
 
 1. Enter the YouTube Video URL in the text box.
-2. Click the Browse button to select the folder in which the video is to be downloaded.
+2. Click the Browse button to select the folder into which the video is to be downloaded.
 3. Select the video resolution or audio.
 4. Click the Download button to download the video
 
