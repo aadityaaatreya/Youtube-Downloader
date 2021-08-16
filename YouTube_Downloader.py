@@ -1,4 +1,3 @@
-#hi
 import tkinter 
 import tkinter.filedialog
 from tkinter import messagebox
@@ -15,18 +14,7 @@ radio = tkinter.IntVar()
 w.title("Youtube Downloader")
 w.geometry("800x500")
 
-
-def download():
- url = urltextbox.get("1.0","end-1c") 
- try:
-  yt = YouTube(url)
- except:
-  messagebox.showinfo("info", "Video unavailable")
- else:
-  yt.streams.get_by_itag(resolution).download(path)
-  
-  messagebox.showinfo("info", "Downloaded")
-
+# Select path to download
 def browse():
  global path
  path = tkinter.filedialog.askdirectory()
@@ -34,6 +22,17 @@ def browse():
  l3.grid(row=1,column=1)
  thumbnail()
  details()
+
+# Display youtube video thumbnail
+def thumbnail():                                        
+ url = urltextbox.get("1.0","end-1c") 
+ yt = YouTube(url)
+ tn = yt.thumbnail_url
+ rawtn= urlopen(tn).read()
+ img = Image.open(BytesIO(rawtn)).resize((240,180))
+ tkimg = ImageTk.PhotoImage(img)
+ l5.configure(image=tkimg)
+ l5.image= tkimg
 
 def details():
  url = urltextbox.get("1.0","end-1c") 
@@ -48,7 +47,19 @@ def git():
  webbrowser.open_new("https://github.com/aadityaaatreya/Youtube-Downloader") 
 def lkdn():
  webbrowser.open_new("www.linkedin.com/in/aaditya-aatreya") 
-   
+
+# Initiate download
+def download():
+ url = urltextbox.get("1.0","end-1c") 
+ try:
+  yt = YouTube(url)
+ except:
+  messagebox.showinfo("info", "Video unavailable")
+ else:
+  yt.streams.get_by_itag(resolution).download(path)
+  messagebox.showinfo("info", "Downloaded")
+
+
 l1 = tkinter.Label(w,text="Video URL")
 l1.grid(row=0,column=0)    
 
@@ -75,24 +86,19 @@ download_button = tkinter.Button(w,text="Download",command=download, font=("Aria
 download_button.grid(row=3,column=2)
 
 github_button = tkinter.Button(w,text="GitHub",command=git, font=("sans serif",20), bg="black",fg ="white")
-github_button.grid(row=6,column=0)
+github_button.grid(row=6,column=1)
 linkedin_button = tkinter.Button(w,text="LinkedIn",command=lkdn, font=("Myriad Pro",20), bg="#0077b5",fg ="white")
-linkedin_button.grid(row=6,column=1)
+linkedin_button.grid(row=6,column=2)
 
-def thumbnail():
- url = urltextbox.get("1.0","end-1c") 
- yt = YouTube(url)
- tn = yt.thumbnail_url
- rawtn= urlopen(tn).read()
- img = Image.open(BytesIO(rawtn)).resize((240,180))
- tkimg = ImageTk.PhotoImage(img)
- l5.configure(image=tkimg)
- l5.image= tkimg
 
+# Default thumbnail view
 cwd = os.getcwd()
-deftn=cwd+"\\res\\youtube-logo.png"          # Default thumbnail view
+deftn=cwd+"\\res\\youtube-logo.png"          
 ytlogo = ImageTk.PhotoImage(file=deftn)
 l5 = tkinter.Label(w, image = ytlogo)
 l5.grid(row=5,column=0)
+
+
+
 
 w.mainloop()
