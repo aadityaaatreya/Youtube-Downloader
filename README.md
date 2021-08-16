@@ -1,6 +1,6 @@
 # Youtube-Downloader
 <img width="602" alt="1" src="https://user-images.githubusercontent.com/38588505/129539412-478769b1-7faf-4e4a-9765-8fb057cbfbbf.PNG">
-<img width="640" alt="2" src="https://user-images.githubusercontent.com/38588505/129539408-bf364011-0ea7-47f8-91fb-858aef539e1a.PNG">
+
 
 YouTube is the most popular video-sharing platform in the world. This is a python based desktop application, with simple GUI built using Tkinter, to download YouTube videos.
 This application can download progressive video streams in 360p, 720p and audio format.
@@ -15,7 +15,8 @@ This application can download progressive video streams in 360p, 720p and audio 
 2. Click the Browse button to select the folder in which the video is to be downloaded.
 3. Select the video resolution or audio.
 4. Click the Download button to download the video
-4. After successful download, a message will pop-up
+<img width="640" alt="2" src="https://user-images.githubusercontent.com/38588505/129539408-bf364011-0ea7-47f8-91fb-858aef539e1a.PNG">
+5. After successful download, a message will pop-up
 
 ********************************************************************
 
