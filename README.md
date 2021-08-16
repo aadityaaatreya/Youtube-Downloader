@@ -5,7 +5,7 @@ This application can download progressive video streams in 360p, 720p and audio 
 
 ## Dependencies:
 1. [pytube](https://pypi.org/project/pytube/) (pytube is a lightweight, Pythonic, dependency-free, library for downloading YouTube Videos.)
-2. [Tkinter](https://docs.python.org/3/library/tkinter.html) ( It comes preinstalled with python3! :smile: ) 
+2. [Tkinter](https://docs.python.org/3/library/tkinter.html) ( It comes preinstalled with python3! ) 
 
 ## Usage:
 
