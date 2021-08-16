@@ -17,5 +17,8 @@ This application can download progressive video streams in 360p, 720p and audio 
     <img width="640" alt="2" src="https://user-images.githubusercontent.com/38588505/129539408-bf364011-0ea7-47f8-91fb-858aef539e1a.PNG">
     
 5. After successful download, a message will pop-up
+
+### Exe file
+If you don't have the above mentioned dependencies installed, you can access the exe from [here.](https://drive.google.com/drive/folders/1IXVDs386gNSZpXsGYfieelWrJ-t5Bpha?usp=sharing). This is a windows executable file that doesn't need python installed.
 ********************************************************************
 
