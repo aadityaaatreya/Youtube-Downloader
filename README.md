@@ -1,7 +1,6 @@
 # Youtube-Downloader
-<img width="120" alt="youtube-logo" src="https://user-images.githubusercontent.com/38588505/129539365-8d9a5bf8-239b-42e8-8af1-b0f2b33e4937.png">
-<img width="640" alt="2" src="https://user-images.githubusercontent.com/38588505/129539408-bf364011-0ea7-47f8-91fb-858aef539e1a.PNG">
 <img width="602" alt="1" src="https://user-images.githubusercontent.com/38588505/129539412-478769b1-7faf-4e4a-9765-8fb057cbfbbf.PNG">
+<img width="640" alt="2" src="https://user-images.githubusercontent.com/38588505/129539408-bf364011-0ea7-47f8-91fb-858aef539e1a.PNG">
 
 YouTube is the most popular video-sharing platform in the world. This is a python based desktop application, with simple GUI built using Tkinter, to download YouTube videos.
 This application can download progressive video streams in 360p, 720p and audio format.
